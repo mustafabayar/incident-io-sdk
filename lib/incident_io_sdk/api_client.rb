@@ -96,6 +96,10 @@ module IncidentIoSdk
       http_method = http_method.to_sym.downcase
 
       header_params = @default_headers.merge(opts[:header_params] || {})
+      if @config.access_token_with_refresh
+        header_params['Authorization'] = "Bearer #{@config.access_token_with_refresh}"
+      end
+
       query_params = opts[:query_params] || {}
       form_params = opts[:form_params] || {}
       follow_location = opts[:follow_location] || true

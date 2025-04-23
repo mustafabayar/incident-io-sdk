@@ -1,7 +1,7 @@
 PATH
   remote: .
   specs:
-    incident_io_sdk (0.1.0)
+    incident_io_sdk (0.1.1)
       typhoeus (~> 1.0, >= 1.0.1)
 
 GEM
