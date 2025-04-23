@@ -23,7 +23,7 @@ gem install incident_io_sdk
 Alternatively, you can add it to your `Gemfile`:
 
 ```ruby
-gem 'incident_io_sdk', '~> 0.1.0'
+gem 'incident_io_sdk', '~> 0.1.1'
 ```
 
 Then run:
@@ -85,8 +85,8 @@ For development purposes, you can run the SDK in a local environment:
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/mustafabayar/incident_io_ruby_sdk.git
-   cd incident_io_ruby_sdk
+   git clone https://github.com/mustafabayar/incident-io-sdk.git
+   cd incident-io-sdk
    ```
 
 2. Install dependencies:

@@ -4,7 +4,7 @@
 
 Gem::Specification.new do |s|
   s.name        = "incident_io_sdk"
-  s.version     = "0.1.0"
+  s.version     = "0.1.1"
   s.platform    = Gem::Platform::RUBY
   s.authors     = ["Mustafa Bayar"]
   s.email       = ["mbcoders@gmail.com"]
@@ -14,9 +14,9 @@ Gem::Specification.new do |s|
   s.license     = "MIT"
   s.required_ruby_version = ">= 2.7"
   s.metadata = {
-    "source_code_uri" => "https://github.com/mustafabayar/incident_io_sdk",
-    "changelog_uri" => "https://github.com/mustafabayar/incident_io_sdk/releases",
-    "bug_tracker_uri" => "https://github.com/mustafabayar/incident_io_sdk/issues",
+    "source_code_uri" => "https://github.com/mustafabayar/incident-io-sdk",
+    "changelog_uri" => "https://github.com/mustafabayar/incident-io-sdk/releases",
+    "bug_tracker_uri" => "https://github.com/mustafabayar/incident-io-sdk/issues",
     "documentation_uri" => "https://docs.incident.io"
   }
 
