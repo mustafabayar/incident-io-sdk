@@ -36,12 +36,14 @@ bundle install
 
 ### Initialization
 
-First, you'll need to configure the SDK with your API key:
+First, you'll need to configure the SDK with your access token:
 
 ```ruby
 require 'incident_io_sdk'
 
-client = IncidentIoSdk::Client.new(api_key: 'your-api-key')
+config = IncidentIoSdk::Configuration.new
+config.access_token = api_key
+client = IncidentIoSdk::ApiClient.new(config)
 ```
 
 ### Making Requests
@@ -49,18 +51,13 @@ client = IncidentIoSdk::Client.new(api_key: 'your-api-key')
 Once the client is initialized, you can use it to interact with the API:
 
 ```ruby
-# Example: Fetching an incident
-incident = client.incidents.get(incident_id: '12345')
+# Example: Fetching schedule entries
 
-puts incident.details
+api = IncidentIoSdk::SchedulesV2Api.new(client)
+response = api.schedules_v2_list_schedule_entries(GITALY_ONCALL_SCHEDULE_ID, opts)
 ```
 
 ### Available Endpoints
-
-You can use the SDK to interact with the following endpoints (examples):
-
-- **Get Incidents**: `client.incidents.get`
-- **Create an Incident**: `client.incidents.create`
 
 For full usage examples, refer to the [documentation](https://docs.incident.io).
 
