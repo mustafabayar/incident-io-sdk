@@ -54,7 +54,7 @@ Once the client is initialized, you can use it to interact with the API:
 # Example: Fetching schedule entries
 
 api = IncidentIoSdk::SchedulesV2Api.new(client)
-response = api.schedules_v2_list_schedule_entries(GITALY_ONCALL_SCHEDULE_ID, opts)
+response = api.schedules_v2_list_schedule_entries(SCHEDULE_ID, opts)
 ```
 
 ### Available Endpoints
