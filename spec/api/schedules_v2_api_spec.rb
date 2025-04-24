@@ -32,56 +32,56 @@ describe 'SchedulesV2Api' do
     end
   end
 
-  # unit tests for schedules_v2_create
+  # unit tests for create
   # Create Schedules V2
   # Create a new schedule.
   # @param schedules_create_payload_v2 
   # @param [Hash] opts the optional parameters
   # @return [SchedulesCreateResultV2]
-  describe 'schedules_v2_create test' do
+  describe 'create test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 
-  # unit tests for schedules_v2_create_override
+  # unit tests for create_override
   # CreateOverride Schedules V2
   # Create a new schedule override.
   # @param schedules_create_override_payload_v2 
   # @param [Hash] opts the optional parameters
   # @return [SchedulesCreateOverrideResultV2]
-  describe 'schedules_v2_create_override test' do
+  describe 'create_override test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 
-  # unit tests for schedules_v2_destroy
+  # unit tests for destroy
   # Destroy Schedules V2
   # Archives a single schedule.
   # @param id Unique internal ID of the schedule
   # @param [Hash] opts the optional parameters
   # @return [nil]
-  describe 'schedules_v2_destroy test' do
+  describe 'destroy test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 
-  # unit tests for schedules_v2_list
+  # unit tests for list
   # List Schedules V2
   # List configured schedules.
   # @param [Hash] opts the optional parameters
   # @option opts [Integer] :page_size number of records to return
   # @option opts [String] :after A schedule&#39;s ID. This endpoint will return a list of schedules after this ID in relation to the API response order.
   # @return [SchedulesListResultV2]
-  describe 'schedules_v2_list test' do
+  describe 'list test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 
-  # unit tests for schedules_v2_list_schedule_entries
+  # unit tests for list_schedule_entries
   # ListScheduleEntries Schedules V2
   # Get a list of schedule entries. The endpoint will return all entries that overlap with the given window, if one is provided.
   # @param schedule_id The ID of the schedule to get entries for.
@@ -89,32 +89,32 @@ describe 'SchedulesV2Api' do
   # @option opts [Time] :entry_window_start The start of the window to get entries for.
   # @option opts [Time] :entry_window_end The end of the window to get entries for.
   # @return [SchedulesListScheduleEntriesResultV2]
-  describe 'schedules_v2_list_schedule_entries test' do
+  describe 'list_schedule_entries test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 
-  # unit tests for schedules_v2_show
+  # unit tests for show
   # Show Schedules V2
   # Get a single schedule.
   # @param id Unique internal ID of the schedule
   # @param [Hash] opts the optional parameters
   # @return [SchedulesShowResultV2]
-  describe 'schedules_v2_show test' do
+  describe 'show test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end
   end
 
-  # unit tests for schedules_v2_update
+  # unit tests for update
   # Update Schedules V2
   # Update a schedule.
   # @param id The schedule ID to update.
   # @param schedules_update_payload_v2 
   # @param [Hash] opts the optional parameters
   # @return [SchedulesUpdateResultV2]
-  describe 'schedules_v2_update test' do
+  describe 'update test' do
     it 'should work' do
       # assertion here. ref: https://rspec.info/features/3-12/rspec-expectations/built-in-matchers/
     end

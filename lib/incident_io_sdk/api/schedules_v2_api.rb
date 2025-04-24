@@ -24,8 +24,8 @@ module IncidentIoSdk
     # @param schedules_create_payload_v2 [SchedulesCreatePayloadV2] 
     # @param [Hash] opts the optional parameters
     # @return [SchedulesCreateResultV2]
-    def schedules_v2_create(schedules_create_payload_v2, opts = {})
-      data, _status_code, _headers = schedules_v2_create_with_http_info(schedules_create_payload_v2, opts)
+    def create(schedules_create_payload_v2, opts = {})
+      data, _status_code, _headers = create_with_http_info(schedules_create_payload_v2, opts)
       data
     end
 
@@ -34,13 +34,13 @@ module IncidentIoSdk
     # @param schedules_create_payload_v2 [SchedulesCreatePayloadV2] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(SchedulesCreateResultV2, Integer, Hash)>] SchedulesCreateResultV2 data, response status code and response headers
-    def schedules_v2_create_with_http_info(schedules_create_payload_v2, opts = {})
+    def create_with_http_info(schedules_create_payload_v2, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.schedules_v2_create ...'
+        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.create ...'
       end
       # verify the required parameter 'schedules_create_payload_v2' is set
       if @api_client.config.client_side_validation && schedules_create_payload_v2.nil?
-        fail ArgumentError, "Missing the required parameter 'schedules_create_payload_v2' when calling SchedulesV2Api.schedules_v2_create"
+        fail ArgumentError, "Missing the required parameter 'schedules_create_payload_v2' when calling SchedulesV2Api.create"
       end
       # resource path
       local_var_path = '/v2/schedules'
@@ -71,7 +71,7 @@ module IncidentIoSdk
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SchedulesV2Api.schedules_v2_create",
+        :operation => :"SchedulesV2Api.create",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -82,7 +82,7 @@ module IncidentIoSdk
 
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SchedulesV2Api#schedules_v2_create\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SchedulesV2Api#create\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -92,8 +92,8 @@ module IncidentIoSdk
     # @param schedules_create_override_payload_v2 [SchedulesCreateOverridePayloadV2] 
     # @param [Hash] opts the optional parameters
     # @return [SchedulesCreateOverrideResultV2]
-    def schedules_v2_create_override(schedules_create_override_payload_v2, opts = {})
-      data, _status_code, _headers = schedules_v2_create_override_with_http_info(schedules_create_override_payload_v2, opts)
+    def create_override(schedules_create_override_payload_v2, opts = {})
+      data, _status_code, _headers = create_override_with_http_info(schedules_create_override_payload_v2, opts)
       data
     end
 
@@ -102,13 +102,13 @@ module IncidentIoSdk
     # @param schedules_create_override_payload_v2 [SchedulesCreateOverridePayloadV2] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(SchedulesCreateOverrideResultV2, Integer, Hash)>] SchedulesCreateOverrideResultV2 data, response status code and response headers
-    def schedules_v2_create_override_with_http_info(schedules_create_override_payload_v2, opts = {})
+    def create_override_with_http_info(schedules_create_override_payload_v2, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.schedules_v2_create_override ...'
+        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.create_override ...'
       end
       # verify the required parameter 'schedules_create_override_payload_v2' is set
       if @api_client.config.client_side_validation && schedules_create_override_payload_v2.nil?
-        fail ArgumentError, "Missing the required parameter 'schedules_create_override_payload_v2' when calling SchedulesV2Api.schedules_v2_create_override"
+        fail ArgumentError, "Missing the required parameter 'schedules_create_override_payload_v2' when calling SchedulesV2Api.create_override"
       end
       # resource path
       local_var_path = '/v2/schedule_overrides'
@@ -139,7 +139,7 @@ module IncidentIoSdk
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SchedulesV2Api.schedules_v2_create_override",
+        :operation => :"SchedulesV2Api.create_override",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -150,7 +150,7 @@ module IncidentIoSdk
 
       data, status_code, headers = @api_client.call_api(:POST, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SchedulesV2Api#schedules_v2_create_override\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SchedulesV2Api#create_override\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -160,8 +160,8 @@ module IncidentIoSdk
     # @param id [String] Unique internal ID of the schedule
     # @param [Hash] opts the optional parameters
     # @return [nil]
-    def schedules_v2_destroy(id, opts = {})
-      schedules_v2_destroy_with_http_info(id, opts)
+    def destroy(id, opts = {})
+      destroy_with_http_info(id, opts)
       nil
     end
 
@@ -170,13 +170,13 @@ module IncidentIoSdk
     # @param id [String] Unique internal ID of the schedule
     # @param [Hash] opts the optional parameters
     # @return [Array<(nil, Integer, Hash)>] nil, response status code and response headers
-    def schedules_v2_destroy_with_http_info(id, opts = {})
+    def destroy_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.schedules_v2_destroy ...'
+        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.destroy ...'
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SchedulesV2Api.schedules_v2_destroy"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SchedulesV2Api.destroy"
       end
       # resource path
       local_var_path = '/v2/schedules/{id}'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
@@ -200,7 +200,7 @@ module IncidentIoSdk
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SchedulesV2Api.schedules_v2_destroy",
+        :operation => :"SchedulesV2Api.destroy",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -211,7 +211,7 @@ module IncidentIoSdk
 
       data, status_code, headers = @api_client.call_api(:DELETE, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SchedulesV2Api#schedules_v2_destroy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SchedulesV2Api#destroy\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -222,8 +222,8 @@ module IncidentIoSdk
     # @option opts [Integer] :page_size number of records to return (default to 25)
     # @option opts [String] :after A schedule&#39;s ID. This endpoint will return a list of schedules after this ID in relation to the API response order.
     # @return [SchedulesListResultV2]
-    def schedules_v2_list(opts = {})
-      data, _status_code, _headers = schedules_v2_list_with_http_info(opts)
+    def list(opts = {})
+      data, _status_code, _headers = list_with_http_info(opts)
       data
     end
 
@@ -233,9 +233,9 @@ module IncidentIoSdk
     # @option opts [Integer] :page_size number of records to return (default to 25)
     # @option opts [String] :after A schedule&#39;s ID. This endpoint will return a list of schedules after this ID in relation to the API response order.
     # @return [Array<(SchedulesListResultV2, Integer, Hash)>] SchedulesListResultV2 data, response status code and response headers
-    def schedules_v2_list_with_http_info(opts = {})
+    def list_with_http_info(opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.schedules_v2_list ...'
+        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.list ...'
       end
       # resource path
       local_var_path = '/v2/schedules'
@@ -263,7 +263,7 @@ module IncidentIoSdk
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SchedulesV2Api.schedules_v2_list",
+        :operation => :"SchedulesV2Api.list",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -274,7 +274,7 @@ module IncidentIoSdk
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SchedulesV2Api#schedules_v2_list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SchedulesV2Api#list\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -286,8 +286,8 @@ module IncidentIoSdk
     # @option opts [Time] :entry_window_start The start of the window to get entries for.
     # @option opts [Time] :entry_window_end The end of the window to get entries for.
     # @return [SchedulesListScheduleEntriesResultV2]
-    def schedules_v2_list_schedule_entries(schedule_id, opts = {})
-      data, _status_code, _headers = schedules_v2_list_schedule_entries_with_http_info(schedule_id, opts)
+    def list_schedule_entries(schedule_id, opts = {})
+      data, _status_code, _headers = list_schedule_entries_with_http_info(schedule_id, opts)
       data
     end
 
@@ -298,13 +298,13 @@ module IncidentIoSdk
     # @option opts [Time] :entry_window_start The start of the window to get entries for.
     # @option opts [Time] :entry_window_end The end of the window to get entries for.
     # @return [Array<(SchedulesListScheduleEntriesResultV2, Integer, Hash)>] SchedulesListScheduleEntriesResultV2 data, response status code and response headers
-    def schedules_v2_list_schedule_entries_with_http_info(schedule_id, opts = {})
+    def list_schedule_entries_with_http_info(schedule_id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.schedules_v2_list_schedule_entries ...'
+        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.list_schedule_entries ...'
       end
       # verify the required parameter 'schedule_id' is set
       if @api_client.config.client_side_validation && schedule_id.nil?
-        fail ArgumentError, "Missing the required parameter 'schedule_id' when calling SchedulesV2Api.schedules_v2_list_schedule_entries"
+        fail ArgumentError, "Missing the required parameter 'schedule_id' when calling SchedulesV2Api.list_schedule_entries"
       end
       # resource path
       local_var_path = '/v2/schedule_entries'
@@ -333,7 +333,7 @@ module IncidentIoSdk
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SchedulesV2Api.schedules_v2_list_schedule_entries",
+        :operation => :"SchedulesV2Api.list_schedule_entries",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -344,7 +344,7 @@ module IncidentIoSdk
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SchedulesV2Api#schedules_v2_list_schedule_entries\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SchedulesV2Api#list_schedule_entries\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -354,8 +354,8 @@ module IncidentIoSdk
     # @param id [String] Unique internal ID of the schedule
     # @param [Hash] opts the optional parameters
     # @return [SchedulesShowResultV2]
-    def schedules_v2_show(id, opts = {})
-      data, _status_code, _headers = schedules_v2_show_with_http_info(id, opts)
+    def show(id, opts = {})
+      data, _status_code, _headers = show_with_http_info(id, opts)
       data
     end
 
@@ -364,13 +364,13 @@ module IncidentIoSdk
     # @param id [String] Unique internal ID of the schedule
     # @param [Hash] opts the optional parameters
     # @return [Array<(SchedulesShowResultV2, Integer, Hash)>] SchedulesShowResultV2 data, response status code and response headers
-    def schedules_v2_show_with_http_info(id, opts = {})
+    def show_with_http_info(id, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.schedules_v2_show ...'
+        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.show ...'
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SchedulesV2Api.schedules_v2_show"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SchedulesV2Api.show"
       end
       # resource path
       local_var_path = '/v2/schedules/{id}'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
@@ -396,7 +396,7 @@ module IncidentIoSdk
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SchedulesV2Api.schedules_v2_show",
+        :operation => :"SchedulesV2Api.show",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -407,7 +407,7 @@ module IncidentIoSdk
 
       data, status_code, headers = @api_client.call_api(:GET, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SchedulesV2Api#schedules_v2_show\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SchedulesV2Api#show\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end
@@ -418,8 +418,8 @@ module IncidentIoSdk
     # @param schedules_update_payload_v2 [SchedulesUpdatePayloadV2] 
     # @param [Hash] opts the optional parameters
     # @return [SchedulesUpdateResultV2]
-    def schedules_v2_update(id, schedules_update_payload_v2, opts = {})
-      data, _status_code, _headers = schedules_v2_update_with_http_info(id, schedules_update_payload_v2, opts)
+    def update(id, schedules_update_payload_v2, opts = {})
+      data, _status_code, _headers = update_with_http_info(id, schedules_update_payload_v2, opts)
       data
     end
 
@@ -429,17 +429,17 @@ module IncidentIoSdk
     # @param schedules_update_payload_v2 [SchedulesUpdatePayloadV2] 
     # @param [Hash] opts the optional parameters
     # @return [Array<(SchedulesUpdateResultV2, Integer, Hash)>] SchedulesUpdateResultV2 data, response status code and response headers
-    def schedules_v2_update_with_http_info(id, schedules_update_payload_v2, opts = {})
+    def update_with_http_info(id, schedules_update_payload_v2, opts = {})
       if @api_client.config.debugging
-        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.schedules_v2_update ...'
+        @api_client.config.logger.debug 'Calling API: SchedulesV2Api.update ...'
       end
       # verify the required parameter 'id' is set
       if @api_client.config.client_side_validation && id.nil?
-        fail ArgumentError, "Missing the required parameter 'id' when calling SchedulesV2Api.schedules_v2_update"
+        fail ArgumentError, "Missing the required parameter 'id' when calling SchedulesV2Api.update"
       end
       # verify the required parameter 'schedules_update_payload_v2' is set
       if @api_client.config.client_side_validation && schedules_update_payload_v2.nil?
-        fail ArgumentError, "Missing the required parameter 'schedules_update_payload_v2' when calling SchedulesV2Api.schedules_v2_update"
+        fail ArgumentError, "Missing the required parameter 'schedules_update_payload_v2' when calling SchedulesV2Api.update"
       end
       # resource path
       local_var_path = '/v2/schedules/{id}'.sub('{' + 'id' + '}', CGI.escape(id.to_s))
@@ -470,7 +470,7 @@ module IncidentIoSdk
       auth_names = opts[:debug_auth_names] || []
 
       new_options = opts.merge(
-        :operation => :"SchedulesV2Api.schedules_v2_update",
+        :operation => :"SchedulesV2Api.update",
         :header_params => header_params,
         :query_params => query_params,
         :form_params => form_params,
@@ -481,7 +481,7 @@ module IncidentIoSdk
 
       data, status_code, headers = @api_client.call_api(:PUT, local_var_path, new_options)
       if @api_client.config.debugging
-        @api_client.config.logger.debug "API called: SchedulesV2Api#schedules_v2_update\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
+        @api_client.config.logger.debug "API called: SchedulesV2Api#update\nData: #{data.inspect}\nStatus code: #{status_code}\nHeaders: #{headers}"
       end
       return data, status_code, headers
     end

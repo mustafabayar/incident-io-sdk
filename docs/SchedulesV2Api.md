@@ -4,18 +4,18 @@ All URIs are relative to *https://api.incident.io*
 
 | Method | HTTP request | Description |
 | ------ | ------------ | ----------- |
-| [**schedules_v2_create**](SchedulesV2Api.md#schedules_v2_create) | **POST** /v2/schedules | Create Schedules V2 |
-| [**schedules_v2_create_override**](SchedulesV2Api.md#schedules_v2_create_override) | **POST** /v2/schedule_overrides | CreateOverride Schedules V2 |
-| [**schedules_v2_destroy**](SchedulesV2Api.md#schedules_v2_destroy) | **DELETE** /v2/schedules/{id} | Destroy Schedules V2 |
-| [**schedules_v2_list**](SchedulesV2Api.md#schedules_v2_list) | **GET** /v2/schedules | List Schedules V2 |
-| [**schedules_v2_list_schedule_entries**](SchedulesV2Api.md#schedules_v2_list_schedule_entries) | **GET** /v2/schedule_entries | ListScheduleEntries Schedules V2 |
-| [**schedules_v2_show**](SchedulesV2Api.md#schedules_v2_show) | **GET** /v2/schedules/{id} | Show Schedules V2 |
-| [**schedules_v2_update**](SchedulesV2Api.md#schedules_v2_update) | **PUT** /v2/schedules/{id} | Update Schedules V2 |
+| [**create**](SchedulesV2Api.md#create) | **POST** /v2/schedules | Create Schedules V2 |
+| [**create_override**](SchedulesV2Api.md#create_override) | **POST** /v2/schedule_overrides | CreateOverride Schedules V2 |
+| [**destroy**](SchedulesV2Api.md#destroy) | **DELETE** /v2/schedules/{id} | Destroy Schedules V2 |
+| [**list**](SchedulesV2Api.md#list) | **GET** /v2/schedules | List Schedules V2 |
+| [**list_schedule_entries**](SchedulesV2Api.md#list_schedule_entries) | **GET** /v2/schedule_entries | ListScheduleEntries Schedules V2 |
+| [**show**](SchedulesV2Api.md#show) | **GET** /v2/schedules/{id} | Show Schedules V2 |
+| [**update**](SchedulesV2Api.md#update) | **PUT** /v2/schedules/{id} | Update Schedules V2 |
 
 
-## schedules_v2_create
+## create
 
-> <SchedulesCreateResultV2> schedules_v2_create(schedules_create_payload_v2)
+> <SchedulesCreateResultV2> create(schedules_create_payload_v2)
 
 Create Schedules V2
 
@@ -32,28 +32,28 @@ schedules_create_payload_v2 = IncidentIoSdk::SchedulesCreatePayloadV2.new({sched
 
 begin
   # Create Schedules V2
-  result = api_instance.schedules_v2_create(schedules_create_payload_v2)
+  result = api_instance.create(schedules_create_payload_v2)
   p result
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_create: #{e}"
+  puts "Error when calling SchedulesV2Api->create: #{e}"
 end
 ```
 
-#### Using the schedules_v2_create_with_http_info variant
+#### Using the create_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SchedulesCreateResultV2>, Integer, Hash)> schedules_v2_create_with_http_info(schedules_create_payload_v2)
+> <Array(<SchedulesCreateResultV2>, Integer, Hash)> create_with_http_info(schedules_create_payload_v2)
 
 ```ruby
 begin
   # Create Schedules V2
-  data, status_code, headers = api_instance.schedules_v2_create_with_http_info(schedules_create_payload_v2)
+  data, status_code, headers = api_instance.create_with_http_info(schedules_create_payload_v2)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SchedulesCreateResultV2>
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_create_with_http_info: #{e}"
+  puts "Error when calling SchedulesV2Api->create_with_http_info: #{e}"
 end
 ```
 
@@ -77,9 +77,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## schedules_v2_create_override
+## create_override
 
-> <SchedulesCreateOverrideResultV2> schedules_v2_create_override(schedules_create_override_payload_v2)
+> <SchedulesCreateOverrideResultV2> create_override(schedules_create_override_payload_v2)
 
 CreateOverride Schedules V2
 
@@ -96,28 +96,28 @@ schedules_create_override_payload_v2 = IncidentIoSdk::SchedulesCreateOverridePay
 
 begin
   # CreateOverride Schedules V2
-  result = api_instance.schedules_v2_create_override(schedules_create_override_payload_v2)
+  result = api_instance.create_override(schedules_create_override_payload_v2)
   p result
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_create_override: #{e}"
+  puts "Error when calling SchedulesV2Api->create_override: #{e}"
 end
 ```
 
-#### Using the schedules_v2_create_override_with_http_info variant
+#### Using the create_override_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SchedulesCreateOverrideResultV2>, Integer, Hash)> schedules_v2_create_override_with_http_info(schedules_create_override_payload_v2)
+> <Array(<SchedulesCreateOverrideResultV2>, Integer, Hash)> create_override_with_http_info(schedules_create_override_payload_v2)
 
 ```ruby
 begin
   # CreateOverride Schedules V2
-  data, status_code, headers = api_instance.schedules_v2_create_override_with_http_info(schedules_create_override_payload_v2)
+  data, status_code, headers = api_instance.create_override_with_http_info(schedules_create_override_payload_v2)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SchedulesCreateOverrideResultV2>
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_create_override_with_http_info: #{e}"
+  puts "Error when calling SchedulesV2Api->create_override_with_http_info: #{e}"
 end
 ```
 
@@ -141,9 +141,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## schedules_v2_destroy
+## destroy
 
-> schedules_v2_destroy(id)
+> destroy(id)
 
 Destroy Schedules V2
 
@@ -160,27 +160,27 @@ id = '01G0J1EXE7AXZ2C93K61WBPYEH' # String | Unique internal ID of the schedule
 
 begin
   # Destroy Schedules V2
-  api_instance.schedules_v2_destroy(id)
+  api_instance.destroy(id)
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_destroy: #{e}"
+  puts "Error when calling SchedulesV2Api->destroy: #{e}"
 end
 ```
 
-#### Using the schedules_v2_destroy_with_http_info variant
+#### Using the destroy_with_http_info variant
 
 This returns an Array which contains the response data (`nil` in this case), status code and headers.
 
-> <Array(nil, Integer, Hash)> schedules_v2_destroy_with_http_info(id)
+> <Array(nil, Integer, Hash)> destroy_with_http_info(id)
 
 ```ruby
 begin
   # Destroy Schedules V2
-  data, status_code, headers = api_instance.schedules_v2_destroy_with_http_info(id)
+  data, status_code, headers = api_instance.destroy_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => nil
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_destroy_with_http_info: #{e}"
+  puts "Error when calling SchedulesV2Api->destroy_with_http_info: #{e}"
 end
 ```
 
@@ -204,9 +204,9 @@ No authorization required
 - **Accept**: Not defined
 
 
-## schedules_v2_list
+## list
 
-> <SchedulesListResultV2> schedules_v2_list(opts)
+> <SchedulesListResultV2> list(opts)
 
 List Schedules V2
 
@@ -226,28 +226,28 @@ opts = {
 
 begin
   # List Schedules V2
-  result = api_instance.schedules_v2_list(opts)
+  result = api_instance.list(opts)
   p result
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_list: #{e}"
+  puts "Error when calling SchedulesV2Api->list: #{e}"
 end
 ```
 
-#### Using the schedules_v2_list_with_http_info variant
+#### Using the list_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SchedulesListResultV2>, Integer, Hash)> schedules_v2_list_with_http_info(opts)
+> <Array(<SchedulesListResultV2>, Integer, Hash)> list_with_http_info(opts)
 
 ```ruby
 begin
   # List Schedules V2
-  data, status_code, headers = api_instance.schedules_v2_list_with_http_info(opts)
+  data, status_code, headers = api_instance.list_with_http_info(opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SchedulesListResultV2>
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_list_with_http_info: #{e}"
+  puts "Error when calling SchedulesV2Api->list_with_http_info: #{e}"
 end
 ```
 
@@ -272,9 +272,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## schedules_v2_list_schedule_entries
+## list_schedule_entries
 
-> <SchedulesListScheduleEntriesResultV2> schedules_v2_list_schedule_entries(schedule_id, opts)
+> <SchedulesListScheduleEntriesResultV2> list_schedule_entries(schedule_id, opts)
 
 ListScheduleEntries Schedules V2
 
@@ -295,28 +295,28 @@ opts = {
 
 begin
   # ListScheduleEntries Schedules V2
-  result = api_instance.schedules_v2_list_schedule_entries(schedule_id, opts)
+  result = api_instance.list_schedule_entries(schedule_id, opts)
   p result
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_list_schedule_entries: #{e}"
+  puts "Error when calling SchedulesV2Api->list_schedule_entries: #{e}"
 end
 ```
 
-#### Using the schedules_v2_list_schedule_entries_with_http_info variant
+#### Using the list_schedule_entries_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SchedulesListScheduleEntriesResultV2>, Integer, Hash)> schedules_v2_list_schedule_entries_with_http_info(schedule_id, opts)
+> <Array(<SchedulesListScheduleEntriesResultV2>, Integer, Hash)> list_schedule_entries_with_http_info(schedule_id, opts)
 
 ```ruby
 begin
   # ListScheduleEntries Schedules V2
-  data, status_code, headers = api_instance.schedules_v2_list_schedule_entries_with_http_info(schedule_id, opts)
+  data, status_code, headers = api_instance.list_schedule_entries_with_http_info(schedule_id, opts)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SchedulesListScheduleEntriesResultV2>
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_list_schedule_entries_with_http_info: #{e}"
+  puts "Error when calling SchedulesV2Api->list_schedule_entries_with_http_info: #{e}"
 end
 ```
 
@@ -342,9 +342,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## schedules_v2_show
+## show
 
-> <SchedulesShowResultV2> schedules_v2_show(id)
+> <SchedulesShowResultV2> show(id)
 
 Show Schedules V2
 
@@ -361,28 +361,28 @@ id = '01G0J1EXE7AXZ2C93K61WBPYEH' # String | Unique internal ID of the schedule
 
 begin
   # Show Schedules V2
-  result = api_instance.schedules_v2_show(id)
+  result = api_instance.show(id)
   p result
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_show: #{e}"
+  puts "Error when calling SchedulesV2Api->show: #{e}"
 end
 ```
 
-#### Using the schedules_v2_show_with_http_info variant
+#### Using the show_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SchedulesShowResultV2>, Integer, Hash)> schedules_v2_show_with_http_info(id)
+> <Array(<SchedulesShowResultV2>, Integer, Hash)> show_with_http_info(id)
 
 ```ruby
 begin
   # Show Schedules V2
-  data, status_code, headers = api_instance.schedules_v2_show_with_http_info(id)
+  data, status_code, headers = api_instance.show_with_http_info(id)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SchedulesShowResultV2>
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_show_with_http_info: #{e}"
+  puts "Error when calling SchedulesV2Api->show_with_http_info: #{e}"
 end
 ```
 
@@ -406,9 +406,9 @@ No authorization required
 - **Accept**: application/json
 
 
-## schedules_v2_update
+## update
 
-> <SchedulesUpdateResultV2> schedules_v2_update(id, schedules_update_payload_v2)
+> <SchedulesUpdateResultV2> update(id, schedules_update_payload_v2)
 
 Update Schedules V2
 
@@ -426,28 +426,28 @@ schedules_update_payload_v2 = IncidentIoSdk::SchedulesUpdatePayloadV2.new({sched
 
 begin
   # Update Schedules V2
-  result = api_instance.schedules_v2_update(id, schedules_update_payload_v2)
+  result = api_instance.update(id, schedules_update_payload_v2)
   p result
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_update: #{e}"
+  puts "Error when calling SchedulesV2Api->update: #{e}"
 end
 ```
 
-#### Using the schedules_v2_update_with_http_info variant
+#### Using the update_with_http_info variant
 
 This returns an Array which contains the response data, status code and headers.
 
-> <Array(<SchedulesUpdateResultV2>, Integer, Hash)> schedules_v2_update_with_http_info(id, schedules_update_payload_v2)
+> <Array(<SchedulesUpdateResultV2>, Integer, Hash)> update_with_http_info(id, schedules_update_payload_v2)
 
 ```ruby
 begin
   # Update Schedules V2
-  data, status_code, headers = api_instance.schedules_v2_update_with_http_info(id, schedules_update_payload_v2)
+  data, status_code, headers = api_instance.update_with_http_info(id, schedules_update_payload_v2)
   p status_code # => 2xx
   p headers # => { ... }
   p data # => <SchedulesUpdateResultV2>
 rescue IncidentIoSdk::ApiError => e
-  puts "Error when calling SchedulesV2Api->schedules_v2_update_with_http_info: #{e}"
+  puts "Error when calling SchedulesV2Api->update_with_http_info: #{e}"
 end
 ```
 

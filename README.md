@@ -23,7 +23,7 @@ gem install incident_io_sdk
 Alternatively, you can add it to your `Gemfile`:
 
 ```ruby
-gem 'incident_io_sdk', '~> 0.1.1'
+gem 'incident_io_sdk', '~> 0.1.3'
 ```
 
 Then run:
@@ -54,7 +54,7 @@ Once the client is initialized, you can use it to interact with the API:
 # Example: Fetching schedule entries
 
 api = IncidentIoSdk::SchedulesV2Api.new(client)
-response = api.schedules_v2_list_schedule_entries(SCHEDULE_ID, opts)
+response = api.list_schedule_entries(SCHEDULE_ID, opts)
 ```
 
 ### Available Endpoints
